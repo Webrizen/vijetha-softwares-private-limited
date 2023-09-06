@@ -21,7 +21,7 @@ export default function Navbar() {
               alt="Vijetha softwares private Limited Logo"
               className="w-10 h-10 mr-2 mix-blend-screen"
             />
-            Vijetha Software's
+            Vijetha Softwares
           </span>
         </Link>
         <div className="md:hidden">
