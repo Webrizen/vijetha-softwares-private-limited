@@ -86,7 +86,7 @@ export default function Navbar() {
             </span>
           </Link>
           <Link href="/">
-            <span className="bg-gradient-to-r from-red-400 to-amber-500 bg-clip-text text-transparent background-animate">
+            <span className="bg-gradient-to-r from-red-400 to-amber-500 bg-clip-text text-transparent">
               Schedule a Call
             </span>
           </Link>

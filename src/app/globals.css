@@ -21,43 +21,70 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 /* CUSTOM CSS  */
 .background-animate {
-  background-size: 400%;
+  background: linear-gradient(270deg, #1a2a6c, #b21f1f, #fdbb2d);
+  background-size: 600% 600%;
+  -webkit-animation: AnimationName 10s ease infinite;
+  -moz-animation: AnimationName 10s ease infinite;
+  animation: AnimationName 10s ease infinite;
+}
 
-  -webkit-animation: AnimationName 3s ease infinite;
-  -moz-animation: AnimationName 3s ease infinite;
-  animation: AnimationName 3s ease infinite;
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
 }
 
 @keyframes AnimationName {
-  0%,
-  100% {
-    background-position: 0% 50%;
+  0% {
+    background-position: 0% 50%
   }
+
   50% {
-    background-position: 100% 50%;
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
   }
 }
 
 .gradient-animation {
-  background: linear-gradient(
-    45deg,
-    #ff8a00,
-    #ff0077,
-    #7700ff,
-    #00ffcc,
-    #00ccff,
-    rgba(225,225,225,0.4)
-  ) 0% 0% / 300% 300%;
+  background: linear-gradient(45deg,
+      #ff8a00,
+      #ff0077,
+      #7700ff,
+      #00ffcc,
+      #00ccff,
+      rgba(225, 225, 225, 0.4)) 0% 0% / 300% 300%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -66,10 +93,72 @@ body {
 }
 
 @keyframes gradientMove {
-  0%, 100% {
+
+  0%,
+  100% {
     background-position: 0% 0%;
   }
+
   50% {
     background-position: 100% 100%;
   }
+}
+
+.grid-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  background: url(/hero-dark.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 0px;
+  margin: 0 auto;
+  max-width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.grid-box {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 0.1px solid rgba(225, 225, 225, 0.041);
+  backdrop-filter: blur(90px);
+}
+
+.chip {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  width: min-content;
+  margin: 0 auto;
+  padding: 10px 15px;
+  background: rgba(225, 225, 225, 0.1);
+  border: 0.1px solid rgba(225, 225, 225, 0.2);
+  border-radius: 35px;
+  font-size: 12px;
+}
+
+.CardX {
+  transition: transform 0.1s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+}
+.CardX:hover{
+  transform: perspective(1000px) rotateX(-5deg) rotateY(5deg) scale(1.05);
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.3);
 }
