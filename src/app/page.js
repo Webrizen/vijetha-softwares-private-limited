@@ -15,7 +15,7 @@ export default function Home() {
         <div className="container mx-auto flex p-5 items-center justify-center flex-col relative">
           <div className="text-center lg:w-3/4 w-full">
             <span className='chip animate-shake animate-once animate-ease-in-out'>Beyond Imagination</span>
-            <h1 className="title-font sm:text-8xl text-3xl my-4 font-bold bg-clip-text text-transparent gradient-animation animate-fade-down animate-once animate-ease-in-out">Unlocking Digital Potential.</h1>
+            <h1 className="title-font sm:text-8xl text-6xl my-4 font-bold bg-clip-text text-transparent gradient-animation animate-fade-down animate-once animate-ease-in-out">Unlocking Digital Potential.</h1>
             <p className="mb-8 leading-relaxed text-white animate-fade-down animate-once animate-ease-in-out">Empowering Innovation Through Cutting-Edge Software Solutions and Transformative Technology Services. Elevate Your Digital Journey with Vijetha Software's Private Limited</p>
             <div className="flex justify-center animate-fade-down animate-once animate-ease-in-out">
               <button className="inline-flex text-white bg-gradient-to-r from-red-400 to-amber-500 background-animate border-0 py-2 px-6 focus:outline-none rounded text-base">Discover</button>
@@ -72,12 +72,12 @@ export default function Home() {
           <div className="flex flex-wrap w-full mb-20">
             <div className="w-full mb-6 lg:mb-0 flex flex-col gap-2 justify-center items-center text-center">
               <span className='chip animate-shake animate-once animate-ease-in-out'>Our Services</span>
-              <h1 className="sm:text-7xl text-2xl font-medium title-font my-1 animate-fade-down animate-once animate-ease-in-out">What We Can Do For You?</h1>
+              <h1 className="sm:text-7xl text-6xl font-medium title-font my-1 animate-fade-down animate-once animate-ease-in-out h1">What We Can Do For You?</h1>
               <p className="w-full leading-relaxed text-gray-200 px-10 animate-fade-down animate-once animate-ease-in-out">We strive to provide honest services and earn the trust of our clients. Our transparent service policy encourages clients to entrust us with the responsibility of establishing their online identity.</p>
               <div className="h-1 w-20 bg-amber-500 rounded"></div>
             </div>
           </div>
-          <div className="flex flex-wrap -m-4 gap-6 justify-center items-center animate-fade-down animate-once animate-ease-in-out">
+          <div className="flex flex-wrap sm:p-0 p-2 -m-4 gap-6 justify-center items-center animate-fade-down animate-once animate-ease-in-out">
             <div className="xl:w-1/4 md:w-1/2 p-3 bg-[rgba(225,225,225,0.1)] backdrop-blur-2xl rounded-lg cardHover">
               <div className=" p-0 rounded-lg">
                 <img className="h-full rounded -z-10 w-full object-cover object-center" src="/web-dev.svg" alt="content" />
