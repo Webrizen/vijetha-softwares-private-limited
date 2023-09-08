@@ -27,35 +27,35 @@ export default function Home() {
               Trusted by the world’s most innovative teams
             </h2>
             <div className="mx-auto mt-4 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-              <img
+              <Image
                 className="col-span-2 max-h-12 w-full object-contain lg:col-span-1 hover:filter hover:invert cursor-pointer"
                 src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg"
                 alt="Transistor"
                 width={158}
                 height={48}
               />
-              <img
+              <Image
                 className="col-span-2 max-h-12 w-full object-contain lg:col-span-1 hover:filter hover:invert cursor-pointer"
                 src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg"
                 alt="Reform"
                 width={158}
                 height={48}
               />
-              <img
+              <Image
                 className="col-span-2 max-h-12 w-full object-contain lg:col-span-1 hover:filter hover:invert cursor-pointer"
                 src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg"
                 alt="Tuple"
                 width={158}
                 height={48}
               />
-              <img
+              <Image
                 className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1 hover:filter hover:invert cursor-pointer"
                 src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg"
                 alt="SavvyCal"
                 width={158}
                 height={48}
               />
-              <img
+              <Image
                 className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1 hover:filter hover:invert cursor-pointer"
                 src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg"
                 alt="Statamic"
@@ -80,7 +80,7 @@ export default function Home() {
           <div className="flex flex-wrap sm:p-0 p-2 -m-4 gap-6 justify-center items-center animate-fade-down animate-once animate-ease-in-out">
             <div className="xl:w-1/4 md:w-1/2 p-3 bg-[rgba(225,225,225,0.1)] backdrop-blur-2xl rounded-lg cardHover">
               <div className=" p-0 rounded-lg">
-                <img className="h-full rounded -z-10 w-full object-cover object-center" src="/web-dev.svg" alt="content" />
+                <Image className="h-full rounded -z-10 w-full object-cover object-center" src="/web-dev.svg" alt="content" width={600} height={400}  />
               </div>
               <div className='info-card z-10 mt-4'>
                 <h3 className="tracking-widest text-amber-500 text-xs font-medium title-font">Web Development</h3>
@@ -90,7 +90,7 @@ export default function Home() {
             </div>
             <div className="xl:w-1/4 md:w-1/2 p-3 bg-[rgba(225,225,225,0.1)] backdrop-blur-2xl rounded-lg cardHover">
               <div className=" p-0 rounded-lg">
-                <img className="h-full rounded -z-10 w-full object-cover object-center" src="/app-dev.svg" alt="content" />
+                <Image className="h-full rounded -z-10 w-full object-cover object-center" src="/app-dev.svg" alt="content" width={600} height={400}  />
               </div>
               <div className='info-card z-10 mt-4'>
                 <h3 className="tracking-widest text-amber-500 text-xs font-medium title-font">App Development</h3>
@@ -100,7 +100,7 @@ export default function Home() {
             </div>
             <div className="xl:w-1/4 md:w-1/2 p-3 bg-[rgba(225,225,225,0.1)] backdrop-blur-2xl rounded-lg cardHover">
               <div className=" p-0 rounded-lg">
-                <img className="h-full rounded -z-10 w-full object-cover object-center" src="/pro-dev.svg" alt="content" />
+                <Image className="h-full rounded -z-10 w-full object-cover object-center" src="/pro-dev.svg" alt="content" width={600} height={400}  />
               </div>
               <div className='info-card z-10 mt-4'>
                 <h3 className="tracking-widest text-amber-500 text-xs font-medium title-font">Prototype Development</h3>
@@ -110,7 +110,7 @@ export default function Home() {
             </div>
             <div className="xl:w-1/4 md:w-1/2 p-3 bg-[rgba(225,225,225,0.1)] backdrop-blur-2xl rounded-lg cardHover">
               <div className=" p-0 rounded-lg">
-                <img className="h-full rounded -z-10 w-full object-cover object-center" src="/ai-dev.svg" alt="content" />
+                <Image className="h-full rounded -z-10 w-full object-cover object-center" src="/ai-dev.svg" alt="content" width={600} height={400}  />
               </div>
               <div className='info-card z-10 mt-4'>
                 <h3 className="tracking-widest text-amber-500 text-xs font-medium title-font">AI & ML (Artificial Intelligence & Machine Learning)</h3>
@@ -120,7 +120,7 @@ export default function Home() {
             </div>
             <div className="xl:w-1/4 md:w-1/2 p-3 bg-[rgba(225,225,225,0.1)] backdrop-blur-2xl rounded-lg cardHover">
               <div className=" p-0 rounded-lg">
-                <img className="h-full rounded -z-10 w-full object-cover object-center" src="/edu-dev.svg" alt="content" />
+                <Image className="h-full rounded -z-10 w-full object-cover object-center" src="/edu-dev.svg" alt="content" width={600} height={400}  />
               </div>
               <div className='info-card z-10 mt-4'>
                 <h3 className="tracking-widest text-amber-500 text-xs font-medium title-font">Education and Training (for Software Enthusiasts)</h3>
@@ -130,7 +130,7 @@ export default function Home() {
             </div>
             <div className="xl:w-1/4 md:w-1/2 p-3 bg-[rgba(225,225,225,0.1)] backdrop-blur-2xl rounded-lg cardHover">
               <div className=" p-0 rounded-lg">
-                <img className="h-full rounded -z-10 w-full object-cover object-center" src="/support-dev.svg" alt="content" />
+                <Image className="h-full rounded -z-10 w-full object-cover object-center" src="/support-dev.svg" alt="content" width={600} height={400}  />
               </div>
               <div className='info-card z-10 mt-4'>
                 <h3 className="tracking-widest text-amber-500 text-xs font-medium title-font">Customer Care Management Cell</h3>
