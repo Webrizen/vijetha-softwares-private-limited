@@ -104,11 +104,10 @@ body {
 }
 
 .gradient-animation{
-  background: linear-gradient(270deg, cyan, #b21f1f, #fdbb2d);
+  background: linear-gradient(45deg,#ff8a00,#f07,#70f,#0fc,#0cf,hsla(0,0%,88%,.4)) 0 0 /300% 300%;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  background-size: 600% 600%;
   -webkit-animation: AnimationName 10s ease infinite;
   -moz-animation: AnimationName 10s ease infinite;
   animation: AnimationName 10s ease infinite;
@@ -154,6 +153,15 @@ body {
   100% {
       background-position: 0% 50%
   }
+}
+
+.chip{
+  padding: 10px 15px;
+  border: 0.1px solid rgba(225,225,225, 0.1);
+  background: rgba(225,225,225, 0.1);
+  border-radius: 35px;
+  white-space: nowrap;
+  width: min-content;
 }
 
 @media screen and (max-width: 600px) {
