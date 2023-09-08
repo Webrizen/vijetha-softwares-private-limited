@@ -64,7 +64,7 @@ body {
   width: min-content;
 }
 
-.links a {
+.links a, .btn {
   padding: 10px;
   white-space: nowrap;
   border-radius: 4px;
@@ -73,7 +73,16 @@ body {
   margin-right: 10px;
 }
 
-.links a:hover {
+.link-btn{
+  padding: 10px;
+  white-space: nowrap;
+  border-radius: 4px;
+  font-size: 13px;
+  background: transparent;
+  margin-right: 10px;
+}
+
+.links a:hover, .btn:hover, .link-btn:hover {
   background: rgba(225, 225, 225, 0.1);
 }
 

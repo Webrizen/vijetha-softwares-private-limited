@@ -67,7 +67,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="body-font">
+      <section className="body-font min-h-screen">
         <div className="container px-4 py-4 mx-auto">
           <div className="flex flex-wrap w-full mb-20">
             <div className="w-full mb-6 lg:mb-0 flex flex-col gap-2 justify-center items-center text-center">
@@ -80,7 +80,7 @@ export default function Home() {
           <div className="flex flex-wrap sm:p-0 p-2 -m-4 gap-6 justify-center items-center animate-fade-down animate-once animate-ease-in-out">
             <div className="xl:w-1/4 md:w-1/2 p-3 bg-[rgba(225,225,225,0.1)] backdrop-blur-2xl rounded-lg cardHover">
               <div className=" p-0 rounded-lg">
-                <Image className="h-full rounded -z-10 w-full object-cover object-center" src="/web-dev.svg" alt="content" width={600} height={400}  />
+                <Image className="h-full rounded -z-10 w-full object-cover object-center" src="/web-dev.svg" alt="content" width={600} height={400} />
               </div>
               <div className='info-card z-10 mt-4'>
                 <h3 className="tracking-widest text-amber-500 text-xs font-medium title-font">Web Development</h3>
@@ -90,7 +90,7 @@ export default function Home() {
             </div>
             <div className="xl:w-1/4 md:w-1/2 p-3 bg-[rgba(225,225,225,0.1)] backdrop-blur-2xl rounded-lg cardHover">
               <div className=" p-0 rounded-lg">
-                <Image className="h-full rounded -z-10 w-full object-cover object-center" src="/app-dev.svg" alt="content" width={600} height={400}  />
+                <Image className="h-full rounded -z-10 w-full object-cover object-center" src="/app-dev.svg" alt="content" width={600} height={400} />
               </div>
               <div className='info-card z-10 mt-4'>
                 <h3 className="tracking-widest text-amber-500 text-xs font-medium title-font">App Development</h3>
@@ -100,7 +100,7 @@ export default function Home() {
             </div>
             <div className="xl:w-1/4 md:w-1/2 p-3 bg-[rgba(225,225,225,0.1)] backdrop-blur-2xl rounded-lg cardHover">
               <div className=" p-0 rounded-lg">
-                <Image className="h-full rounded -z-10 w-full object-cover object-center" src="/pro-dev.svg" alt="content" width={600} height={400}  />
+                <Image className="h-full rounded -z-10 w-full object-cover object-center" src="/pro-dev.svg" alt="content" width={600} height={400} />
               </div>
               <div className='info-card z-10 mt-4'>
                 <h3 className="tracking-widest text-amber-500 text-xs font-medium title-font">Prototype Development</h3>
@@ -110,7 +110,7 @@ export default function Home() {
             </div>
             <div className="xl:w-1/4 md:w-1/2 p-3 bg-[rgba(225,225,225,0.1)] backdrop-blur-2xl rounded-lg cardHover">
               <div className=" p-0 rounded-lg">
-                <Image className="h-full rounded -z-10 w-full object-cover object-center" src="/ai-dev.svg" alt="content" width={600} height={400}  />
+                <Image className="h-full rounded -z-10 w-full object-cover object-center" src="/ai-dev.svg" alt="content" width={600} height={400} />
               </div>
               <div className='info-card z-10 mt-4'>
                 <h3 className="tracking-widest text-amber-500 text-xs font-medium title-font">AI & ML (Artificial Intelligence & Machine Learning)</h3>
@@ -120,7 +120,7 @@ export default function Home() {
             </div>
             <div className="xl:w-1/4 md:w-1/2 p-3 bg-[rgba(225,225,225,0.1)] backdrop-blur-2xl rounded-lg cardHover">
               <div className=" p-0 rounded-lg">
-                <Image className="h-full rounded -z-10 w-full object-cover object-center" src="/edu-dev.svg" alt="content" width={600} height={400}  />
+                <Image className="h-full rounded -z-10 w-full object-cover object-center" src="/edu-dev.svg" alt="content" width={600} height={400} />
               </div>
               <div className='info-card z-10 mt-4'>
                 <h3 className="tracking-widest text-amber-500 text-xs font-medium title-font">Education and Training (for Software Enthusiasts)</h3>
@@ -130,13 +130,53 @@ export default function Home() {
             </div>
             <div className="xl:w-1/4 md:w-1/2 p-3 bg-[rgba(225,225,225,0.1)] backdrop-blur-2xl rounded-lg cardHover">
               <div className=" p-0 rounded-lg">
-                <Image className="h-full rounded -z-10 w-full object-cover object-center" src="/support-dev.svg" alt="content" width={600} height={400}  />
+                <Image className="h-full rounded -z-10 w-full object-cover object-center" src="/support-dev.svg" alt="content" width={600} height={400} />
               </div>
               <div className='info-card z-10 mt-4'>
                 <h3 className="tracking-widest text-amber-500 text-xs font-medium title-font">Customer Care Management Cell</h3>
                 <h2 className="text-lg text-gray-100 font-medium title-font mb-0"> Putting Customers First</h2>
                 <p className="leading-relaxed text-base text-[rgba(225,225,225,0.5)]">Our dedicated customer care management cell ensures that your queries and concerns are addressed promptly. We prioritize your satisfaction and support your success.</p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="body-font min-h-screen my-12">
+        <div className="container px-4 py-4 mx-auto">
+          <div className="flex flex-wrap w-full mb-20">
+            <div className="w-full mb-6 lg:mb-0 flex flex-col gap-2 justify-center items-center text-center">
+              <span className='chip animate-shake animate-once animate-ease-in-out'>Our Projects</span>
+              <h1 className="sm:text-7xl text-6xl font-medium title-font my-1 animate-fade-down animate-once animate-ease-in-out h1">Explore Our Innovative Projects</h1>
+              <p className="w-full leading-relaxed text-gray-200 px-10 animate-fade-down animate-once animate-ease-in-out">At Vijetha Softwares, we're passionate about pushing the boundaries of technology to create solutions that make a difference in your life. Our projects are born from a relentless pursuit of innovation and excellence, and we're excited to share them with you. We're at the forefront of technological innovation, bringing you cutting-edge solutions to enhance your life. Discover our exciting projects below.</p>
+              <div className="h-1 w-20 bg-amber-500 rounded"></div>
+            </div>
+          </div>
+          <div className="flex flex-wrap sm:p-0 py-4 px-4 gap-0 justify-center items-center animate-fade-down animate-once animate-ease-in-out bg-[rgba(225,225,225,0.1)] hover:bg-[rgba(225,225,225,0.2)] cursor-pointer rounded-3xl overflow-hidden">
+            <div className="lg:max-w-lg lg:w-full md:w-1/2 w-full mb-10 md:mb-0 rounded-3xl">
+              <img className="object-cover object-center rounded-2xl" alt="hero" src="https://dummyimage.com/720x600" />
+            </div>
+            <div className="lg:flex-grow md:w-1/2 lg:pl-8 md:pl-8 flex flex-col md:items-start md:text-left items-center text-center">
+              <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-300">AI-Powered Social Networking
+              </h1>
+              <p className="mb-8 leading-relaxed">Cutting-edge AI-powered cyber security cell to preserve your privacy with our upcoming social networking App. Experience a new level of connectivity while keeping your data safe.</p>
+              <div className="flex justify-center">
+                <button className="btn">Learn more</button>
+                <button className="link-btn">View Live</button>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col-reverse sm:flex-row md:flex-row flex-wrap sm:p-0 py-4 px-4 sm:gap-0 md:gap-0 justify-center items-center animate-fade-down animate-once animate-ease-in-out bg-[rgba(225,225,225,0.1)] hover:bg-[rgba(225,225,225,0.2)] cursor-pointer rounded-3xl overflow-hidden mt-6">
+            <div className="lg:flex-grow md:w-1/2 lg:p-8 md:p-8 flex flex-col md:items-start md:text-left mb-2 md:mb-0 items-center text-center">
+            <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-300">Travel & Tourism Made Easy with MyRide
+              </h1>
+              <p className="mb-8 leading-relaxed">Introducing "MyRide," our innovative app that simplifies travel and tourism. Plan your trips, discover new destinations, and make your travel experiences seamless.</p>
+              <div className="flex justify-center">
+                <button className="btn">Learn more</button>
+                <button className="link-btn">View Live</button>
+              </div>
+            </div>
+            <div className="lg:max-w-lg lg:w-full md:w-1/2 w-ful lg:mb-0 sm:mb-0 md:mb-0 mb-8">
+              <img className="object-cover object-center rounded-2xl" alt="hero" src="https://dummyimage.com/720x600" />
             </div>
           </div>
         </div>
