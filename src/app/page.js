@@ -439,7 +439,7 @@ export default function Home() {
       </section>
       <section class="container px-4 py-4 mx-auto" id='About'>
         <div
-          class="block rounded-3xl bg-[rgba(225,225,225,0.1)] shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
+          class="block rounded-3xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
           <div class="flex flex-wrap items-center">
             <div class="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
               <img src="/about-us.webp" alt="About Us"
