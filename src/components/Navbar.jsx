@@ -88,27 +88,27 @@ export default function Navbar() {
               </li>
               <li>
                 <Link href="/about">
-                  <span className="dark:text-white dark:hover:text-gray-300">About</span>
+                  <span className="dark:text-white dark:hover:text-gray-300">Services</span>
                 </Link>
               </li>
               <li>
                 <Link href="/contact">
                   <span className="dark:text-white dark:hover:text-gray-300">
-                    Contact
+                  Projects
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href="/sponsorships">
                   <span className="dark:text-white dark:hover:text-gray-300">
-                    Sponsorships
+                  Products
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href="/accounts">
                   <span className="dark:text-white dark:hover:text-gray-300">
-                    Accounts
+                    About
                   </span>
                 </Link>
               </li>
