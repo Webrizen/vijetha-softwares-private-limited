@@ -6,23 +6,23 @@ import CountUp from 'react-countup';
 
 const images = [
   {
-    src: 'https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg',
+    src: '/brand-1.svg',
     alt: 'Transistor',
   },
   {
-    src: 'https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg',
+    src: '/brand-2.svg',
     alt: 'Reform',
   },
   {
-    src: 'https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg',
+    src: '/brand-3.svg',
     alt: 'Tuple',
   },
   {
-    src: 'https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg',
+    src: '/brand-4.svg',
     alt: 'SavvyCal',
   },
   {
-    src: 'https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg',
+    src: '/brand-5.svg',
     alt: 'Statamic',
   },
 ];
@@ -207,7 +207,7 @@ export default function Home() {
               {images.map((image, index) => (
                 <motion.div
                   key={index}
-                  className="col-span-2 max-h-12 w-full object-contain lg:col-span-1 hover:filter hover:invert cursor-pointer"
+                  className="col-span-2 max-h-12 w-full object-contain lg:col-span-1 filter grayscale invert hover:opacity-25 cursor-pointer"
                   initial="hidden"
                   animate="visible"
                   variants={index % 2 === 0 ? slideInLeft : slideInRight}
@@ -434,6 +434,93 @@ export default function Home() {
               </h2>
               <p className="leading-relaxed">Saas Products</p>
             </motion.div>
+          </div>
+        </div>
+      </section>
+      <section class="container px-4 py-4 mx-auto">
+        <div
+          class="block rounded-3xl bg-[rgba(225,225,225,0.1)] shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
+          <div class="flex flex-wrap items-center">
+            <div class="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
+              <img src="/about-us.webp" alt="About Us"
+                class="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg p-2" />
+            </div>
+            <div class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
+              <div class="px-6 py-12 md:px-12">
+                <h2 class="mb-6 pb-2 text-4xl font-bold">
+                  Who We Are
+                </h2>
+                <p class="mb-6 pb-2 text-neutral-500 dark:text-neutral-300">
+                  At Vijetha Softwares, we are a dynamic team of experts dedicated to crafting cutting-edge software solutions tailored to your unique needs. With over 18 years of experience, we have mastered the art of web development, mobile app development, and computer software development.
+                </p>
+
+                <div class="grid gap-x-6 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3">
+                  <div class="mb-6">
+                    <p class="flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" class="mr-3 h-6 w-6 text-neutral-900 dark:text-neutral-100">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>Full-Stack Expertise
+                    </p>
+                  </div>
+
+                  <div class="mb-6">
+                    <p class="flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" class="mr-3 h-6 w-6 text-neutral-900 dark:text-neutral-100">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>Mobile-First Approach
+                    </p>
+                  </div>
+
+                  <div class="mb-6">
+                    <p class="flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" class="mr-3 h-6 w-6 text-neutral-900 dark:text-neutral-100">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>Cutting-Edge Technologies
+                    </p>
+                  </div>
+
+                  <div class="mb-6">
+                    <p class="flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" class="mr-3 h-6 w-6 text-neutral-900 dark:text-neutral-100">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>Agile Development
+                    </p>
+                  </div>
+
+                  <div class="mb-6">
+                    <p class="flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" class="mr-3 h-6 w-6 text-neutral-900 dark:text-neutral-100">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>Scalable Solutions
+                    </p>
+                  </div>
+
+                  <div class="mb-6">
+                    <p class="flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" class="mr-3 h-6 w-6 text-neutral-900 dark:text-neutral-100">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>Custom Software Solutions
+                    </p>
+                  </div>
+                  <div class="mb-6">
+                    <p class="flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" class="mr-3 h-6 w-6 text-neutral-900 dark:text-neutral-100">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>Data-Driven Insights
+                    </p>
+                  </div>
+
+                  <div class="mb-6">
+                    <p class="flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" class="mr-3 h-6 w-6 text-neutral-900 dark:text-neutral-100">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>Strategic Partnerships
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
