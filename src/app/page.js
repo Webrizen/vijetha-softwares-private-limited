@@ -1,6 +1,8 @@
 "use client";
 import Image from 'next/image';
 import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
+import CountUp from 'react-countup';
 
 const images = [
   {
@@ -65,6 +67,28 @@ const services = [
 ];
 
 export default function Home() {
+
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  const [ref1, inView1] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  const [ref2, inView2] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  const [ref3, inView3] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+
   const fadeDown = {
     hidden: { opacity: 0, y: -20 },
     visible: { opacity: 1, y: 0 },
@@ -103,6 +127,17 @@ export default function Home() {
     hidden: { opacity: 0, scale: 0 },
     visible: { opacity: 1, scale: 1 },
   };
+
+  const cardAnimation = {
+    hidden: { opacity: 0, scale: 0 },
+    visible: { opacity: 1, scale: 1 },
+  };
+
+  const memberAnimation = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <>
       <section className="body-font relative min-h-screen flex flex-col gap-3 justify-center items-center py-24">
@@ -190,12 +225,12 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="body-font min-h-screen">
+      <section className="body-font min-h-screen" ref={ref} id='services'>
         <div className="container px-4 py-4 mx-auto">
           <motion.div
             className="flex flex-wrap w-full mb-20"
             initial="hidden"
-            animate="visible"
+            animate={inView ? "visible" : "hidden"}
             variants={sectionAnimation}
           >
             <div className="w-full mb-6 lg:mb-0 flex flex-col gap-2 justify-center items-center text-center">
@@ -219,106 +254,206 @@ export default function Home() {
             </div>
           </motion.div>
           <div className="flex flex-wrap sm:p-0 p-2 -m-4 gap-6 justify-center items-center animate-fade-down animate-once animate-ease-in-out">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              className="xl:w-1/4 md:w-1/2 p-3 bg-[rgba(225,225,225,0.1)] backdrop-blur-2xl rounded-lg cardHover"
-              initial="hidden"
-              animate="visible"
-              variants={cardsAnimation}
-              transition={{ delay: index * 0.2 }}
-            >
-              <div className=" p-0 rounded-lg">
-                <Image className="h-full rounded -z-10 w-full object-cover object-center" src={service.image} alt="content" width={600} height={400} />
-              </div>
-              <div className='info-card z-10 mt-4'>
-                <h3 className="tracking-widest text-amber-500 text-xs font-medium title-font">{service.category}</h3>
-                <h2 className="text-lg text-gray-100 font-medium title-font mb-0">{service.title}</h2>
-                <p className="leading-relaxed text-base text-[rgba(225,225,225,0.5)]">{service.description}</p>
-              </div>
-            </motion.div>
-          ))}
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                className="xl:w-1/4 md:w-1/2 p-3 bg-[rgba(225,225,225,0.1)] backdrop-blur-2xl rounded-lg cardHover"
+                initial="hidden"
+                animate={inView ? "visible" : "hidden"}
+                variants={cardsAnimation}
+                transition={{ delay: index * 0.2 }}
+              >
+                <div className=" p-0 rounded-lg">
+                  <Image className="h-full rounded -z-10 w-full object-cover object-center" src={service.image} alt="content" width={600} height={400} />
+                </div>
+                <div className='info-card z-10 mt-4'>
+                  <h3 className="tracking-widest text-amber-500 text-xs font-medium title-font">{service.category}</h3>
+                  <h2 className="text-lg text-gray-100 font-medium title-font mb-0">{service.title}</h2>
+                  <p className="leading-relaxed text-base text-[rgba(225,225,225,0.5)]">{service.description}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
-      <section className="body-font min-h-screen my-12">
+      <section className="body-font min-h-screen my-12" ref={ref1} id='projects'>
         <div className="container px-4 py-4 mx-auto">
-          <div className="flex flex-wrap w-full mb-20">
+          <motion.div
+            className="flex flex-wrap w-full mb-20"
+            initial="hidden"
+            animate={inView1 ? "visible" : "hidden"}
+            variants={sectionAnimation}
+          >
             <div className="w-full mb-6 lg:mb-0 flex flex-col gap-2 justify-center items-center text-center">
               <span className='chip animate-shake animate-once animate-ease-in-out'>Our Projects</span>
-              <h1 className="sm:text-7xl text-6xl font-medium title-font my-1 animate-fade-down animate-once animate-ease-in-out h1">Explore Our Innovative Projects</h1>
-              <p className="w-full leading-relaxed text-gray-200 px-10 animate-fade-down animate-once animate-ease-in-out">At Vijetha Softwares, we're passionate about pushing the boundaries of technology to create solutions that make a difference in your life. Our projects are born from a relentless pursuit of innovation and excellence, and we're excited to share them with you. We're at the forefront of technological innovation, bringing you cutting-edge solutions to enhance your life. Discover our exciting projects below.</p>
-              <div className="h-1 w-20 bg-amber-500 rounded"></div>
+              <motion.h1
+                className="sm:text-7xl text-6xl font-medium title-font my-1 animate-fade-down animate-once animate-ease-in-out h1"
+                variants={textAnimation}
+              >
+                Explore Our Innovative Projects
+              </motion.h1>
+              <motion.p
+                className="w-full leading-relaxed text-gray-200 px-10 animate-fade-down animate-once animate-ease-in-out"
+                variants={textAnimation}
+              >
+                At Vijetha Softwares, we're passionate about pushing the boundaries of technology to create solutions that make a difference in your life. Our projects are born from a relentless pursuit of innovation and excellence, and we're excited to share them with you. We're at the forefront of technological innovation, bringing you cutting-edge solutions to enhance your life. Discover our exciting projects below.
+              </motion.p>
+              <motion.div
+                className="h-1 w-20 bg-amber-500 rounded"
+                variants={lineAnimation}
+              ></motion.div>
             </div>
-          </div>
+          </motion.div>
           <div className="flex flex-wrap sm:p-0 py-4 px-4 gap-0 justify-center items-center animate-fade-down animate-once animate-ease-in-out bg-[rgba(225,225,225,0.1)] hover:bg-[rgba(225,225,225,0.2)] cursor-pointer rounded-3xl overflow-hidden">
-            <div className="lg:max-w-lg lg:w-full md:w-1/2 w-full mb-10 md:mb-0 rounded-3xl">
+            <motion.div
+              className="lg:max-w-lg lg:w-full md:w-1/2 w-full mb-10 md:mb-0 rounded-3xl"
+              initial="hidden"
+              animate={inView1 ? "visible" : "hidden"}
+              variants={cardAnimation}
+            >
               <img className="object-cover object-center rounded-2xl" alt="hero" src="https://dummyimage.com/720x600" />
-            </div>
-            <div className="lg:flex-grow md:w-1/2 lg:pl-8 md:pl-8 flex flex-col md:items-start md:text-left items-center text-center">
-              <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-300">AI-Powered Social Networking
-              </h1>
+            </motion.div>
+            <motion.div
+              className="lg:flex-grow md:w-1/2 lg:pl-8 md:pl-8 flex flex-col md:items-start md:text-left items-center text-center"
+              initial="hidden"
+              animate={inView1 ? "visible" : "hidden"}
+              variants={cardAnimation}
+            >
+              <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-300">AI-Powered Social Networking</h1>
               <p className="mb-8 leading-relaxed">Cutting-edge AI-powered cyber security cell to preserve your privacy with our upcoming social networking App. Experience a new level of connectivity while keeping your data safe.</p>
               <div className="flex justify-center">
                 <button className="btn">Learn more</button>
                 <button className="link-btn">View Live</button>
               </div>
-            </div>
+            </motion.div>
           </div>
           <div className="flex flex-col-reverse sm:flex-row md:flex-row flex-wrap sm:p-0 py-4 px-4 sm:gap-0 md:gap-0 justify-center items-center animate-fade-down animate-once animate-ease-in-out bg-[rgba(225,225,225,0.1)] hover:bg-[rgba(225,225,225,0.2)] cursor-pointer rounded-3xl overflow-hidden mt-6">
-            <div className="lg:flex-grow md:w-1/2 lg:p-8 md:p-8 flex flex-col md:items-start md:text-left mb-2 md:mb-0 items-center text-center">
-              <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-300">Travel & Tourism Made Easy with MyRide
-              </h1>
+            <motion.div
+              className="lg:flex-grow md:w-1/2 lg:p-8 md:p-8 flex flex-col md:items-start md:text-left mb-2 md:mb-0 items-center text-center"
+              initial="hidden"
+              animate={inView1 ? "visible" : "hidden"}
+              variants={cardAnimation}
+            >
+              <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-300">Travel & Tourism Made Easy with MyRide</h1>
               <p className="mb-8 leading-relaxed">Introducing "MyRide," our innovative app that simplifies travel and tourism. Plan your trips, discover new destinations, and make your travel experiences seamless.</p>
               <div className="flex justify-center">
                 <button className="btn">Learn more</button>
                 <button className="link-btn">View Live</button>
               </div>
-            </div>
-            <div className="lg:max-w-lg lg:w-full md:w-1/2 w-ful lg:mb-0 sm:mb-0 md:mb-0 mb-8">
+            </motion.div>
+            <motion.div
+              className="lg:max-w-lg lg:w-full md:w-1/2 w-ful lg:mb-0 sm:mb-0 md:mb-0 mb-8"
+              initial="hidden"
+              animate={inView1 ? "visible" : "hidden"}
+              variants={cardAnimation}
+            >
               <img className="object-cover object-center rounded-2xl" alt="hero" src="https://dummyimage.com/720x600" />
-            </div>
+            </motion.div>
           </div>
-          <div className="flex flex-wrap sm:p-0 py-4 px-4 gap-0 justify-center items-center animate-fade-down animate-once animate-ease-in-out bg-[rgba(225,225,225,0.1)] hover:bg-[rgba(225,225,225,0.2)] cursor-pointer rounded-3xl overflow-hidden mt-8">
-            <div className="lg:max-w-lg lg:w-full md:w-1/2 w-full mb-10 md:mb-0 rounded-3xl">
+          <div className="flex flex-wrap sm:p-0 py-4 px-4 gap-0 justify-center items-center animate-fade-down animate-once animate-ease-in-out bg-[rgba(225,225,225,0.1)] hover.bg-[rgba(225,225,225,0.2)] cursor-pointer rounded-3xl overflow-hidden mt-8">
+            <motion.div
+              className="lg:max-w-lg lg:w-full md:w-1/2 w-full mb-10 md:mb-0 rounded-3xl"
+              initial="hidden"
+              animate={inView1 ? "visible" : "hidden"}
+              variants={cardAnimation}
+            >
               <img className="object-cover object-center rounded-2xl" alt="hero" src="https://dummyimage.com/720x600" />
-            </div>
-            <div className="lg:flex-grow md:w-1/2 lg:pl-8 md:pl-8 flex flex-col md:items-start md:text-left items-center text-center">
-              <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-300">Futuristic Stock Prediction
-              </h1>
+            </motion.div>
+            <motion.div
+              className="lg:flex-grow md:w-1/2 lg:pl-8 md:pl-8 flex flex-col md:items-start md:text-left items-center text-center"
+              initial="hidden"
+              animate={inView1 ? "visible" : "hidden"}
+              variants={cardAnimation}
+            >
+              <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-300">Futuristic Stock Prediction</h1>
               <p className="mb-8 leading-relaxed">Protect your assets and support your financial growth with our upcoming app. Our state-of-the-art stock prediction technology will empower you to make informed investment decisions.</p>
               <div className="flex justify-center">
                 <button className="btn">Learn more</button>
                 <button className="link-btn">View Live</button>
               </div>
-            </div>
+            </motion.div>
           </div>
-          <div className="flex flex-col-reverse sm:flex-row md:flex-row flex-wrap sm:p-0 py-4 px-4 sm:gap-0 md:gap-0 justify-center items-center animate-fade-down animate-once animate-ease-in-out bg-[rgba(225,225,225,0.1)] hover:bg-[rgba(225,225,225,0.2)] cursor-pointer rounded-3xl overflow-hidden mt-6">
-            <div className="lg:flex-grow md:w-1/2 lg:p-8 md:p-8 flex flex-col md:items-start md:text-left mb-2 md:mb-0 items-center text-center">
-              <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-300"> Vyaasa - Online Learning Made Lively
-              </h1>
-              <p className="mb-8 leading-relaxed">Elevate your learning experience with "Vyaasa," our upcoming app designed to nurture growth from school to college. Whether you're a student or job seeker, "Vyaasa" provides the skills and knowledge you need for career advancement. <br /> <br />
-
-                Explore these projects and discover how we're shaping the future with innovative technology solutions.</p>
+          <div className="flex flex-col-reverse sm:flex-row md:flex-row flex-wrap sm:p-0 py-4 px-4 sm:gap-0 md:gap-0 justify-center items-center animate-fade-down animate-once animate-ease-in-out bg-[rgba(225,225,225,0.1)] hover.bg-[rgba(225,225,225,0.2)] cursor-pointer rounded-3xl overflow-hidden mt-6">
+            <motion.div
+              className="lg:flex-grow md:w-1/2 lg:p-8 md:p-8 flex flex-col md:items-start md:text-left mb-2 md:mb-0 items-center text-center"
+              initial="hidden"
+              animate={inView1 ? "visible" : "hidden"}
+              variants={cardAnimation}
+            >
+              <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-300">Vyaasa - Online Learning Made Lively</h1>
+              <p className="mb-8 leading-relaxed">Elevate your learning experience with "Vyaasa," our upcoming app designed to nurture growth from school to college. Whether you're a student or job seeker, "Vyaasa" provides the skills and knowledge you need for career advancement. <br /> <br /> Explore these projects and discover how we're shaping the future with innovative technology solutions.</p>
               <div className="flex justify-center">
                 <button className="btn">Learn more</button>
                 <button className="link-btn">View Live</button>
               </div>
-            </div>
-            <div className="lg:max-w-lg lg:w-full md:w-1/2 w-ful lg:mb-0 sm:mb-0 md:mb-0 mb-8">
+            </motion.div>
+            <motion.div
+              className="lg:max-w-lg lg:w-full md:w-1/2 w-ful lg:mb-0 sm:mb-0 md:mb-0 mb-8"
+              initial="hidden"
+              animate={inView1 ? "visible" : "hidden"}
+              variants={cardAnimation}
+            >
               <img className="object-cover object-center rounded-2xl" alt="hero" src="https://dummyimage.com/720x600" />
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
-      <section className="body-font">
+      <section className="text-gray-300 body-font" ref={ref3}>
         <div className="container px-5 py-24 mx-auto">
-          <div className="flex flex-col text-center w-full mb-20">
-            <h1 className="lg:text-7xl mb-4 h1 font-bold">Our Team</h1>
-            <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Meet the dedicated members of our team who drive innovation and excellence.</p>
+          <div className="flex flex-wrap -m-4 text-center">
+            <motion.div className="p-4 sm:w-1/4 w-1/2"
+              initial="hidden"
+              animate={inView3 ? "visible" : "hidden"}
+              variants={shake}>
+              <h2 className="title-font font-medium sm:text-4xl text-3xl text-amber-500">
+                <CountUp start={0} end={2700} duration={2} separator="," />+
+              </h2>
+              <p className="leading-relaxed">Satisfied Clients</p>
+            </motion.div>
+            <motion.div className="p-4 sm:w-1/4 w-1/2" initial="hidden"
+              animate={inView3 ? "visible" : "hidden"}
+              variants={shake}>
+              <h2 className="title-font font-medium sm:text-4xl text-3xl text-amber-500">
+                <CountUp start={0} end={18} duration={2} />+
+              </h2>
+              <p className="leading-relaxed">Years Of Experience</p>
+            </motion.div>
+            <motion.div className="p-4 sm:w-1/4 w-1/2" initial="hidden"
+              animate={inView3 ? "visible" : "hidden"}
+              variants={shake}>
+              <h2 className="title-font font-medium sm:text-4xl text-3xl text-amber-500">
+                <CountUp start={0} end={4.8} duration={2} decimals={1} />+
+              </h2>
+              <p className="leading-relaxed">Star Ratings</p>
+            </motion.div>
+            <motion.div className="p-4 sm:w-1/4 w-1/2" initial="hidden"
+              animate={inView3 ? "visible" : "hidden"}
+              variants={shake}>
+              <h2 className="title-font font-medium sm:text-4xl text-3xl text-amber-500">
+                <CountUp start={0} end={4} duration={2} />
+              </h2>
+              <p className="leading-relaxed">Saas Products</p>
+            </motion.div>
           </div>
+        </div>
+      </section>
+      <section className="body-font" ref={ref2}>
+        <div className="container px-5 py-24 mx-auto">
+          <motion.div
+            className="flex flex-col text-center w-full mb-20"
+            initial="hidden"
+            animate={inView2 ? "visible" : "hidden"}
+            variants={sectionAnimation}
+          >
+            <h1 className="lg:text-7xl text-6xl mb-4 h1 font-bold">Our Team</h1>
+            <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
+              Meet the dedicated members of our team who drive innovation and excellence.
+            </p>
+          </motion.div>
           <div className="flex flex-wrap -m-4">
-            <div className="p-4 lg:w-1/2">
+            <motion.div className="p-4 lg:w-1/2" initial="hidden"
+              animate={inView2 ? "visible" : "hidden"}
+              variants={memberAnimation}>
               <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
                 <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://dummyimage.com/200x200" />
                 <div className="flex-grow sm:pl-8">
@@ -344,8 +479,10 @@ export default function Home() {
                   </span>
                 </div>
               </div>
-            </div>
-            <div className="p-4 lg:w-1/2">
+            </motion.div>
+            <motion.div className="p-4 lg:w-1/2" initial="hidden"
+              animate={inView2 ? "visible" : "hidden"}
+              variants={memberAnimation}>
               <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
                 <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://dummyimage.com/201x201" />
                 <div className="flex-grow sm:pl-8">
@@ -371,8 +508,10 @@ export default function Home() {
                   </span>
                 </div>
               </div>
-            </div>
-            <div className="p-4 lg:w-1/2">
+            </motion.div>
+            <motion.div className="p-4 lg:w-1/2" initial="hidden"
+              animate={inView2 ? "visible" : "hidden"}
+              variants={memberAnimation}>
               <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
                 <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://dummyimage.com/204x204" />
                 <div className="flex-grow sm:pl-8">
@@ -398,8 +537,10 @@ export default function Home() {
                   </span>
                 </div>
               </div>
-            </div>
-            <div className="p-4 lg:w-1/2">
+            </motion.div>
+            <motion.div className="p-4 lg:w-1/2" initial="hidden"
+              animate={inView2 ? "visible" : "hidden"}
+              variants={memberAnimation}>
               <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
                 <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://dummyimage.com/206x206" />
                 <div className="flex-grow sm:pl-8">
@@ -425,8 +566,10 @@ export default function Home() {
                   </span>
                 </div>
               </div>
-            </div>
-            <div className="p-4 lg:w-1/2">
+            </motion.div>
+            <motion.div className="p-4 lg:w-1/2" initial="hidden"
+              animate={inView2 ? "visible" : "hidden"}
+              variants={memberAnimation}>
               <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
                 <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://dummyimage.com/206x206" />
                 <div className="flex-grow sm:pl-8">
@@ -452,8 +595,10 @@ export default function Home() {
                   </span>
                 </div>
               </div>
-            </div>
-            <div className="p-4 lg:w-1/2">
+            </motion.div>
+            <motion.div className="p-4 lg:w-1/2" initial="hidden"
+              animate={inView2 ? "visible" : "hidden"}
+              variants={memberAnimation}>
               <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
                 <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://dummyimage.com/206x206" />
                 <div className="flex-grow sm:pl-8">
@@ -479,14 +624,14 @@ export default function Home() {
                   </span>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
       <section className="mb-2 sm:w-4/5 w-full p-3 mx-auto">
         <div className="flex justify-center">
           <div className="text-center md:max-w-xl lg:max-w-3xl">
-            <h2 className="mb-12 px-6 text-3xl font-bold">Contact us</h2>
+            <h2 className="mb-12 px-6 sm:text-7xl text-6xl font-bold h1">Contact us</h2>
           </div>
         </div>
 

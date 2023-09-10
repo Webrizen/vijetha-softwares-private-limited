@@ -63,16 +63,16 @@ export default function Navbar() {
           <Link href="/">
             <span className="dark:text-white dark:hover:text-gray-300">Home</span>
           </Link>
-          <Link href="/about">
+          <Link href="#services">
             <span className="dark:text-white dark:hover:text-gray-300">Services</span>
           </Link>
-          <Link href="/sponsorships">
+          <Link href="#projects">
             <span className="dark:text-white dark:hover:text-gray-300">Projects</span>
           </Link>
-          <Link href="/contact">
+          <Link href="#products">
             <span className="dark:text-white dark:hover:text-gray-300">Products</span>
           </Link>
-          <Link href="/accounts">
+          <Link href="#About">
             <span className="dark:text-white dark:hover:text-gray-300">About</span>
           </Link>
         </div>
@@ -87,26 +87,26 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link href="/about">
+                <Link href="#services">
                   <span className="dark:text-white dark:hover:text-gray-300">Services</span>
                 </Link>
               </li>
               <li>
-                <Link href="/contact">
+                <Link href="#projects">
                   <span className="dark:text-white dark:hover:text-gray-300">
                   Projects
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/sponsorships">
+                <Link href="#products">
                   <span className="dark:text-white dark:hover:text-gray-300">
                   Products
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/accounts">
+                <Link href="#About">
                   <span className="dark:text-white dark:hover:text-gray-300">
                     About
                   </span>
