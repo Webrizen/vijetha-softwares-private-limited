@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
 import CountUp from 'react-countup';
+import jayandra from '@/assets/jayandra.webp';
+import adarsh from '@/assets/adarsh.webp';
 
 const images = [
   {
@@ -437,83 +439,83 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section class="container px-4 py-4 mx-auto" id='About'>
+      <section className="container px-4 py-4 mx-auto" id='About'>
         <div
-          class="block rounded-3xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
-          <div class="flex flex-wrap items-center">
-            <div class="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
+          className="block rounded-3xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
+          <div className="flex flex-wrap items-center">
+            <div className="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
               <img src="/about-us.webp" alt="About Us"
-                class="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg p-2" />
+                className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg p-2" />
             </div>
-            <div class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
-              <div class="px-6 py-12 md:px-12">
-                <h2 class="mb-6 pb-2 text-4xl font-bold">
+            <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
+              <div className="px-6 py-12 md:px-12">
+                <h2 className="mb-6 pb-2 text-4xl font-bold">
                   Who We Are
                 </h2>
-                <p class="mb-6 pb-2 text-neutral-500 dark:text-neutral-300">
+                <p className="mb-6 pb-2 text-neutral-500 dark:text-neutral-300">
                   At Vijetha Softwares, we are a dynamic team of experts dedicated to crafting cutting-edge software solutions tailored to your unique needs. With over 18 years of experience, we have mastered the art of web development, mobile app development, and computer software development.
                 </p>
 
-                <div class="grid gap-x-6 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3">
-                  <div class="mb-6">
-                    <p class="flex items-center">
+                <div className="grid gap-x-6 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3">
+                  <div className="mb-6">
+                    <p className="flex items-center">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                        stroke="currentColor" class="mr-3 h-6 w-6 text-neutral-900 dark:text-neutral-100">
+                        stroke="currentColor" className="mr-3 h-6 w-6 text-neutral-900 dark:text-neutral-100">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>Full-Stack Expertise
                     </p>
                   </div>
 
-                  <div class="mb-6">
-                    <p class="flex items-center">
+                  <div className="mb-6">
+                    <p className="flex items-center">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                        stroke="currentColor" class="mr-3 h-6 w-6 text-neutral-900 dark:text-neutral-100">
+                        stroke="currentColor" className="mr-3 h-6 w-6 text-neutral-900 dark:text-neutral-100">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>Mobile-First Approach
                     </p>
                   </div>
 
-                  <div class="mb-6">
-                    <p class="flex items-center">
+                  <div className="mb-6">
+                    <p className="flex items-center">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                        stroke="currentColor" class="mr-3 h-6 w-6 text-neutral-900 dark:text-neutral-100">
+                        stroke="currentColor" className="mr-3 h-6 w-6 text-neutral-900 dark:text-neutral-100">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>Cutting-Edge Technologies
                     </p>
                   </div>
 
-                  <div class="mb-6">
-                    <p class="flex items-center">
+                  <div className="mb-6">
+                    <p className="flex items-center">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                        stroke="currentColor" class="mr-3 h-6 w-6 text-neutral-900 dark:text-neutral-100">
+                        stroke="currentColor" className="mr-3 h-6 w-6 text-neutral-900 dark:text-neutral-100">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>Agile Development
                     </p>
                   </div>
 
-                  <div class="mb-6">
-                    <p class="flex items-center">
+                  <div className="mb-6">
+                    <p className="flex items-center">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                        stroke="currentColor" class="mr-3 h-6 w-6 text-neutral-900 dark:text-neutral-100">
+                        stroke="currentColor" className="mr-3 h-6 w-6 text-neutral-900 dark:text-neutral-100">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>Scalable Solutions
                     </p>
                   </div>
 
-                  <div class="mb-6">
-                    <p class="flex items-center">
+                  <div className="mb-6">
+                    <p className="flex items-center">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                        stroke="currentColor" class="mr-3 h-6 w-6 text-neutral-900 dark:text-neutral-100">
+                        stroke="currentColor" className="mr-3 h-6 w-6 text-neutral-900 dark:text-neutral-100">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>Custom Software Solutions
                     </p>
                   </div>
-                  <div class="mb-6">
-                    <p class="flex items-center">
+                  <div className="mb-6">
+                    <p className="flex items-center">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                        stroke="currentColor" class="mr-3 h-6 w-6 text-neutral-900 dark:text-neutral-100">
+                        stroke="currentColor" className="mr-3 h-6 w-6 text-neutral-900 dark:text-neutral-100">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>Data-Driven Insights
                     </p>
                   </div>
 
-                  <div class="mb-6">
-                    <p class="flex items-center">
+                  <div className="mb-6">
+                    <p className="flex items-center">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                        stroke="currentColor" class="mr-3 h-6 w-6 text-neutral-900 dark:text-neutral-100">
+                        stroke="currentColor" className="mr-3 h-6 w-6 text-neutral-900 dark:text-neutral-100">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>Strategic Partnerships
                     </p>
                   </div>
@@ -600,7 +602,7 @@ export default function Home() {
               animate={inView2 ? "visible" : "hidden"}
               variants={memberAnimation}>
               <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-                <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://dummyimage.com/204x204" />
+                <Image alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src={jayandra} />
                 <div className="flex-grow sm:pl-8">
                   <h2 className="title-font font-medium text-lg text-amber-700">Jayandra Babu</h2>
                   <h3 className="text-gray-500 mb-3">CEO</h3>
@@ -629,7 +631,7 @@ export default function Home() {
               animate={inView2 ? "visible" : "hidden"}
               variants={memberAnimation}>
               <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-                <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="https://dummyimage.com/206x206" />
+                <Image alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src={adarsh} />
                 <div className="flex-grow sm:pl-8">
                   <h2 className="title-font font-medium text-lg text-amber-700">Adarsh Jha</h2>
                   <h3 className="text-gray-500 mb-3">CTO</h3>
@@ -715,6 +717,57 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="body-font">
+        <div className="container px-5 py-24 mx-auto">
+          <div className="text-center w-full">
+            <h2 className="mb-12 px-6 sm:text-7xl text-6xl font-bold h1">Our Branches</h2>
+          </div>
+          <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+            <div className="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-amber-100 text-amber-500 flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="sm:w-16 sm:h-16 w-10 h-10">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 01-1.161.886l-.143.048a1.107 1.107 0 00-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 01-1.652.928l-.679-.906a1.125 1.125 0 00-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 00-8.862 12.872M12.75 3.031a9 9 0 016.69 14.036m0 0l-.177-.529A2.25 2.25 0 0017.128 15H16.5l-.324-.324a1.453 1.453 0 00-2.328.377l-.036.073a1.586 1.586 0 01-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 01-5.276 3.67m0 0a9 9 0 01-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25" />
+              </svg>
+            </div>
+            <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+              <h2 className="text-gray-500 text-lg title-font font-medium mb-2">Kolkata</h2>
+              <p className="leading-relaxed text-base">Vijetha Softwares in Kolkata is your local technology partner. We provide innovative software solutions for your business needs.</p>
+            </div>
+          </div>
+          <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+            <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+              <h2 className="text-gray-500 text-lg title-font font-medium mb-2">Ahmedabad </h2>
+              <p className="leading-relaxed text-base">Vijetha Softwares in Ahmedabad is your gateway to cutting-edge software solutions. We bring your ideas to life.</p>
+            </div>
+            <div className="sm:w-32 sm:order-none order-first sm:h-32 h-20 w-20 sm:ml-10 inline-flex items-center justify-center rounded-full bg-amber-100 text-amber-500 flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="sm:w-16 sm:h-16 w-10 h-10">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 01-1.161.886l-.143.048a1.107 1.107 0 00-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 01-1.652.928l-.679-.906a1.125 1.125 0 00-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 00-8.862 12.872M12.75 3.031a9 9 0 016.69 14.036m0 0l-.177-.529A2.25 2.25 0 0017.128 15H16.5l-.324-.324a1.453 1.453 0 00-2.328.377l-.036.073a1.586 1.586 0 01-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 01-5.276 3.67m0 0a9 9 0 01-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25" />
+              </svg>
+            </div>
+          </div>
+          <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+            <div className="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-amber-100 text-amber-500 flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="sm:w-16 sm:h-16 w-10 h-10">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 01-1.161.886l-.143.048a1.107 1.107 0 00-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 01-1.652.928l-.679-.906a1.125 1.125 0 00-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 00-8.862 12.872M12.75 3.031a9 9 0 016.69 14.036m0 0l-.177-.529A2.25 2.25 0 0017.128 15H16.5l-.324-.324a1.453 1.453 0 00-2.328.377l-.036.073a1.586 1.586 0 01-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 01-5.276 3.67m0 0a9 9 0 01-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25" />
+              </svg>
+            </div>
+            <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+              <h2 className="text-gray-500 text-lg title-font font-medium mb-2">Vizag</h2>
+              <p className="leading-relaxed text-base">Vijetha Softwares in Vizag is your partner in innovation. We deliver software solutions that transform your business.</p>
+            </div>
+          </div>
+          <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+            <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+              <h2 className="text-gray-500 text-lg title-font font-medium mb-2">Kochi </h2>
+              <p className="leading-relaxed text-base">Vijetha Softwares in Kochi is your partner in growth. We provide innovative software solutions to help you thrive.</p>
+            </div>
+            <div className="sm:w-32 sm:order-none order-first sm:h-32 h-20 w-20 sm:ml-10 inline-flex items-center justify-center rounded-full bg-amber-100 text-amber-500 flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="sm:w-16 sm:h-16 w-10 h-10">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 01-1.161.886l-.143.048a1.107 1.107 0 00-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 01-1.652.928l-.679-.906a1.125 1.125 0 00-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 00-8.862 12.872M12.75 3.031a9 9 0 016.69 14.036m0 0l-.177-.529A2.25 2.25 0 0017.128 15H16.5l-.324-.324a1.453 1.453 0 00-2.328.377l-.036.073a1.586 1.586 0 01-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 01-5.276 3.67m0 0a9 9 0 01-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="mb-2 sm:w-4/5 w-full p-3 mx-auto">
         <div className="flex justify-center">
           <div className="text-center md:max-w-xl lg:max-w-3xl">
@@ -727,15 +780,15 @@ export default function Home() {
             <form>
               <div className="relative mb-4">
                 <label for="Name" className="leading-7 text-sm text-gray-600">Name</label>
-                <input type="text" id="Name" name="Name" className="w-full bg-white rounded border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                <input type="text" id="Name" name="Name" className="w-full bg-white rounded border border-gray-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
               </div>
               <div className="relative mb-4">
                 <label for="email" className="leading-7 text-sm text-gray-600">Email</label>
-                <input type="email" id="email" name="email" className="w-full bg-white rounded border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                <input type="email" id="email" name="email" className="w-full bg-white rounded border border-gray-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
               </div>
               <div className="relative mb-4">
                 <label for="message" className="leading-7 text-sm text-gray-600">Message</label>
-                <textarea id="message" name="message" className="w-full bg-white rounded border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                <textarea id="message" name="message" className="w-full bg-white rounded border border-gray-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
               </div>
               <button className="inline-flex text-white bg-gradient-to-r from-red-400 to-amber-500 background-animate border-0 py-2 px-6 focus:outline-none rounded text-base">Send Message</button>
               <p className="text-xs text-gray-500 mt-3">"Rest assured, your inbox won't be bombarded. By sharing your email with us, you're aiding in safeguarding our website against unwanted traffic, including bots and more."</p>
