@@ -1,6 +1,108 @@
+"use client";
 import Image from 'next/image';
+import { motion } from "framer-motion";
+
+const images = [
+  {
+    src: 'https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg',
+    alt: 'Transistor',
+  },
+  {
+    src: 'https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg',
+    alt: 'Reform',
+  },
+  {
+    src: 'https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg',
+    alt: 'Tuple',
+  },
+  {
+    src: 'https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg',
+    alt: 'SavvyCal',
+  },
+  {
+    src: 'https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg',
+    alt: 'Statamic',
+  },
+];
+
+const services = [
+  {
+    category: 'Web Development',
+    title: 'Building Digital Experiences',
+    description: 'Craft interactive websites and web applications tailored to your needs. From user-friendly interfaces to dynamic functionalities, our web development services bring your online vision to life.',
+    image: '/web-dev.svg',
+  },
+  {
+    category: 'App Development',
+    title: 'Powering Your Mobile Presence',
+    description: 'Create powerful, feature-rich mobile apps for iOS and Android platforms. Our app development expertise ensures your ideas are transformed into engaging and functional mobile experiences.',
+    image: '/app-dev.svg',
+  },
+  {
+    category: 'Prototype Development',
+    title: 'From Idea to Innovation',
+    description: 'Rapidly transform your concepts into tangible prototypes. Our prototype development services help you visualize and refine your ideas, accelerating the path to innovative solutions.',
+    image: '/pro-dev.svg',
+  },
+  {
+    category: 'AI & ML (Artificial Intelligence & Machine Learning)',
+    title: 'Pioneering Intelligent Solutions',
+    description: 'Harness the power of AI and ML to gain insights, automate tasks, and make data-driven decisions. Our expertise in these cutting-edge technologies empowers your business.',
+    image: '/ai-dev.svg',
+  },
+  {
+    category: 'Education and Training (for Software Enthusiasts)',
+    title: 'Empowering Future Innovators',
+    description: 'Invest in your skills and career growth with our comprehensive education and training programs. From software enthusiasts to professionals, we provide a path to excellence.',
+    image: '/edu-dev.svg',
+  },
+  {
+    category: 'Customer Care Management Cell',
+    title: 'Putting Customers First',
+    description: 'Our dedicated customer care management cell ensures that your queries and concerns are addressed promptly. We prioritize your satisfaction and support your success.',
+    image: '/support-dev.svg',
+  },
+];
 
 export default function Home() {
+  const fadeDown = {
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  const shake = {
+    hidden: { x: -10 },
+    visible: { x: 0 },
+  };
+
+  const slideInLeft = {
+    hidden: { x: -20, opacity: 0 },
+    visible: { x: 0, opacity: 1 },
+  };
+
+  const slideInRight = {
+    hidden: { x: 20, opacity: 0 },
+    visible: { x: 0, opacity: 1 },
+  };
+  const sectionAnimation = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
+  const textAnimation = {
+    hidden: { y: -20, opacity: 0 },
+    visible: { y: 0, opacity: 1 },
+  };
+
+  const lineAnimation = {
+    hidden: { scaleX: 0 },
+    visible: { scaleX: 1 },
+  };
+
+  const cardsAnimation = {
+    hidden: { opacity: 0, scale: 0 },
+    visible: { opacity: 1, scale: 1 },
+  };
   return (
     <>
       <section className="body-font relative min-h-screen flex flex-col gap-3 justify-center items-center py-24">
@@ -8,61 +110,81 @@ export default function Home() {
         <div className="grid-background">
           <div className="grid-container">
             {Array.from({ length: 30 }, (_, index) => (
-              <div key={index} className="grid-box animate-fade-down animate-once  animate-ease-in-out"></div>
+              <motion.div
+                key={index}
+                className="grid-box animate-fade-down animate-once animate-ease-in-out"
+                initial="hidden"
+                animate="visible"
+                variants={fadeDown}
+              ></motion.div>
             ))}
           </div>
         </div>
         <div className="container mx-auto flex p-5 items-center justify-center flex-col relative">
           <div className="text-center lg:w-3/4 w-full">
-            <span className='chip animate-shake animate-once animate-ease-in-out'>Beyond Imagination</span>
-            <h1 className="title-font sm:text-8xl text-6xl my-4 font-bold bg-clip-text text-transparent gradient-animation animate-fade-down animate-once animate-ease-in-out">Unlocking</h1>
-            <h3 className='sm:text-4xl text-3xl my-4 font-bold bg-clip-text text-transparent gradient-animation animate-fade-down animate-once animate-ease-in-out'>Digital Potential.</h3>
-            <p className="mb-8 leading-relaxed text-white animate-fade-down animate-once animate-ease-in-out">Empowering Innovation Through Cutting-Edge Software Solutions and Transformative Technology Services. Elevate Your Digital Journey with Vijetha Software's Private Limited</p>
-            <div className="flex justify-center animate-fade-down animate-once animate-ease-in-out">
+            <motion.span
+              className="chip"
+              initial="visible"
+              animate="visible"
+              variants={fadeDown}
+            >
+              Beyond Imagination
+            </motion.span>
+            <motion.h1
+              className="title-font sm:text-8xl text-6xl my-4 font-bold bg-clip-text text-transparent gradient-animation"
+              initial="visible"
+              animate="visible"
+              variants={fadeDown}
+            >
+              Unlocking
+            </motion.h1>
+            <motion.h3
+              className="sm:text-4xl text-3xl my-4 font-bold bg-clip-text text-transparent gradient-animation"
+              initial="hidden"
+              animate="visible"
+              variants={fadeDown}
+            >
+              Digital Potential.
+            </motion.h3>
+            <motion.p
+              className="mb-8 leading-relaxed text-white animate-fade-down animate-once animate-ease-in-out"
+              initial="hidden"
+              animate="visible"
+              variants={fadeDown}
+            >
+              Empowering Innovation Through Cutting-Edge Software Solutions and Transformative Technology Services. Elevate Your Digital Journey with Vijetha Software's Private Limited
+            </motion.p>
+            <motion.div
+              className="flex justify-center animate-fade-down animate-once animate-ease-in-out"
+              initial="hidden"
+              animate="visible"
+              variants={fadeDown}
+            >
               <button className="inline-flex text-white bg-gradient-to-r from-red-400 to-amber-500 background-animate border-0 py-2 px-6 focus:outline-none rounded text-base">Discover</button>
               <button className="ml-4 inline-flex text-gray-500 bg-[rgba(225,225,225,0.1)] border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-base">Get a Demo</button>
-            </div>
+            </motion.div>
           </div>
           <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
             <h2 className="text-center text-lg font-semibold leading-8 text-gray-500">
               Trusted by the world’s most innovative teams
             </h2>
             <div className="mx-auto mt-4 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-              <Image
-                className="col-span-2 max-h-12 w-full object-contain lg:col-span-1 hover:filter hover:invert cursor-pointer"
-                src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg"
-                alt="Transistor"
-                width={158}
-                height={48}
-              />
-              <Image
-                className="col-span-2 max-h-12 w-full object-contain lg:col-span-1 hover:filter hover:invert cursor-pointer"
-                src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg"
-                alt="Reform"
-                width={158}
-                height={48}
-              />
-              <Image
-                className="col-span-2 max-h-12 w-full object-contain lg:col-span-1 hover:filter hover:invert cursor-pointer"
-                src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg"
-                alt="Tuple"
-                width={158}
-                height={48}
-              />
-              <Image
-                className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1 hover:filter hover:invert cursor-pointer"
-                src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg"
-                alt="SavvyCal"
-                width={158}
-                height={48}
-              />
-              <Image
-                className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1 hover:filter hover:invert cursor-pointer"
-                src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg"
-                alt="Statamic"
-                width={158}
-                height={48}
-              />
+              {images.map((image, index) => (
+                <motion.div
+                  key={index}
+                  className="col-span-2 max-h-12 w-full object-contain lg:col-span-1 hover:filter hover:invert cursor-pointer"
+                  initial="hidden"
+                  animate="visible"
+                  variants={index % 2 === 0 ? slideInLeft : slideInRight}
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    width={158}
+                    height={48}
+                  />
+                </motion.div>
+              ))}
             </div>
 
           </div>
@@ -70,75 +192,52 @@ export default function Home() {
       </section>
       <section className="body-font min-h-screen">
         <div className="container px-4 py-4 mx-auto">
-          <div className="flex flex-wrap w-full mb-20">
+          <motion.div
+            className="flex flex-wrap w-full mb-20"
+            initial="hidden"
+            animate="visible"
+            variants={sectionAnimation}
+          >
             <div className="w-full mb-6 lg:mb-0 flex flex-col gap-2 justify-center items-center text-center">
-              <span className='chip animate-shake animate-once animate-ease-in-out'>Our Services</span>
-              <h1 className="sm:text-7xl text-6xl font-medium title-font my-1 animate-fade-down animate-once animate-ease-in-out h1">What We Can Do For You?</h1>
-              <p className="w-full leading-relaxed text-gray-200 px-10 animate-fade-down animate-once animate-ease-in-out">We strive to provide honest services and earn the trust of our clients. Our transparent service policy encourages clients to entrust us with the responsibility of establishing their online identity.</p>
-              <div className="h-1 w-20 bg-amber-500 rounded"></div>
+              <span className="chip animate-shake animate-once animate-ease-in-out">Our Services</span>
+              <motion.h1
+                className="sm:text-7xl text-6xl font-medium title-font my-1 animate-fade-down animate-once animate-ease-in-out h1"
+                variants={textAnimation}
+              >
+                What We Can Do For You?
+              </motion.h1>
+              <motion.p
+                className="w-full leading-relaxed text-gray-200 px-10 animate-fade-down animate-once animate-ease-in-out"
+                variants={textAnimation}
+              >
+                We strive to provide honest services and earn the trust of our clients. Our transparent service policy encourages clients to entrust us with the responsibility of establishing their online identity.
+              </motion.p>
+              <motion.div
+                className="h-1 w-20 bg-amber-500 rounded"
+                variants={lineAnimation}
+              ></motion.div>
             </div>
-          </div>
+          </motion.div>
           <div className="flex flex-wrap sm:p-0 p-2 -m-4 gap-6 justify-center items-center animate-fade-down animate-once animate-ease-in-out">
-            <div className="xl:w-1/4 md:w-1/2 p-3 bg-[rgba(225,225,225,0.1)] backdrop-blur-2xl rounded-lg cardHover">
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              className="xl:w-1/4 md:w-1/2 p-3 bg-[rgba(225,225,225,0.1)] backdrop-blur-2xl rounded-lg cardHover"
+              initial="hidden"
+              animate="visible"
+              variants={cardsAnimation}
+              transition={{ delay: index * 0.2 }}
+            >
               <div className=" p-0 rounded-lg">
-                <Image className="h-full rounded -z-10 w-full object-cover object-center" src="/web-dev.svg" alt="content" width={600} height={400} />
+                <Image className="h-full rounded -z-10 w-full object-cover object-center" src={service.image} alt="content" width={600} height={400} />
               </div>
               <div className='info-card z-10 mt-4'>
-                <h3 className="tracking-widest text-amber-500 text-xs font-medium title-font">Web Development</h3>
-                <h2 className="text-lg text-gray-100 font-medium title-font mb-0">Building Digital Experiences</h2>
-                <p className="leading-relaxed text-base text-[rgba(225,225,225,0.5)]">Craft interactive websites and web applications tailored to your needs. From user-friendly interfaces to dynamic functionalities, our web development services bring your online vision to life.</p>
+                <h3 className="tracking-widest text-amber-500 text-xs font-medium title-font">{service.category}</h3>
+                <h2 className="text-lg text-gray-100 font-medium title-font mb-0">{service.title}</h2>
+                <p className="leading-relaxed text-base text-[rgba(225,225,225,0.5)]">{service.description}</p>
               </div>
-            </div>
-            <div className="xl:w-1/4 md:w-1/2 p-3 bg-[rgba(225,225,225,0.1)] backdrop-blur-2xl rounded-lg cardHover">
-              <div className=" p-0 rounded-lg">
-                <Image className="h-full rounded -z-10 w-full object-cover object-center" src="/app-dev.svg" alt="content" width={600} height={400} />
-              </div>
-              <div className='info-card z-10 mt-4'>
-                <h3 className="tracking-widest text-amber-500 text-xs font-medium title-font">App Development</h3>
-                <h2 className="text-lg text-gray-100 font-medium title-font mb-0">Powering Your Mobile Presence</h2>
-                <p className="leading-relaxed text-base text-[rgba(225,225,225,0.5)]">Create powerful, feature-rich mobile apps for iOS and Android platforms. Our app development expertise ensures your ideas are transformed into engaging and functional mobile experiences.</p>
-              </div>
-            </div>
-            <div className="xl:w-1/4 md:w-1/2 p-3 bg-[rgba(225,225,225,0.1)] backdrop-blur-2xl rounded-lg cardHover">
-              <div className=" p-0 rounded-lg">
-                <Image className="h-full rounded -z-10 w-full object-cover object-center" src="/pro-dev.svg" alt="content" width={600} height={400} />
-              </div>
-              <div className='info-card z-10 mt-4'>
-                <h3 className="tracking-widest text-amber-500 text-xs font-medium title-font">Prototype Development</h3>
-                <h2 className="text-lg text-gray-100 font-medium title-font mb-0"> From Idea to Innovation</h2>
-                <p className="leading-relaxed text-base text-[rgba(225,225,225,0.5)]">Rapidly transform your concepts into tangible prototypes. Our prototype development services help you visualize and refine your ideas, accelerating the path to innovative solutions.</p>
-              </div>
-            </div>
-            <div className="xl:w-1/4 md:w-1/2 p-3 bg-[rgba(225,225,225,0.1)] backdrop-blur-2xl rounded-lg cardHover">
-              <div className=" p-0 rounded-lg">
-                <Image className="h-full rounded -z-10 w-full object-cover object-center" src="/ai-dev.svg" alt="content" width={600} height={400} />
-              </div>
-              <div className='info-card z-10 mt-4'>
-                <h3 className="tracking-widest text-amber-500 text-xs font-medium title-font">AI & ML (Artificial Intelligence & Machine Learning)</h3>
-                <h2 className="text-lg text-gray-100 font-medium title-font mb-0"> Pioneering Intelligent Solutions</h2>
-                <p className="leading-relaxed text-base text-[rgba(225,225,225,0.5)]">Harness the power of AI and ML to gain insights, automate tasks, and make data-driven decisions. Our expertise in these cutting-edge technologies empowers your business.</p>
-              </div>
-            </div>
-            <div className="xl:w-1/4 md:w-1/2 p-3 bg-[rgba(225,225,225,0.1)] backdrop-blur-2xl rounded-lg cardHover">
-              <div className=" p-0 rounded-lg">
-                <Image className="h-full rounded -z-10 w-full object-cover object-center" src="/edu-dev.svg" alt="content" width={600} height={400} />
-              </div>
-              <div className='info-card z-10 mt-4'>
-                <h3 className="tracking-widest text-amber-500 text-xs font-medium title-font">Education and Training (for Software Enthusiasts)</h3>
-                <h2 className="text-lg text-gray-100 font-medium title-font mb-0">Empowering Future Innovators</h2>
-                <p className="leading-relaxed text-base text-[rgba(225,225,225,0.5)]"> Invest in your skills and career growth with our comprehensive education and training programs. From software enthusiasts to professionals, we provide a path to excellence.</p>
-              </div>
-            </div>
-            <div className="xl:w-1/4 md:w-1/2 p-3 bg-[rgba(225,225,225,0.1)] backdrop-blur-2xl rounded-lg cardHover">
-              <div className=" p-0 rounded-lg">
-                <Image className="h-full rounded -z-10 w-full object-cover object-center" src="/support-dev.svg" alt="content" width={600} height={400} />
-              </div>
-              <div className='info-card z-10 mt-4'>
-                <h3 className="tracking-widest text-amber-500 text-xs font-medium title-font">Customer Care Management Cell</h3>
-                <h2 className="text-lg text-gray-100 font-medium title-font mb-0"> Putting Customers First</h2>
-                <p className="leading-relaxed text-base text-[rgba(225,225,225,0.5)]">Our dedicated customer care management cell ensures that your queries and concerns are addressed promptly. We prioritize your satisfaction and support your success.</p>
-              </div>
-            </div>
+            </motion.div>
+          ))}
           </div>
         </div>
       </section>
@@ -215,7 +314,7 @@ export default function Home() {
       <section className="body-font">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-20">
-            <h1 className="lg:text-7xl mb-4 h1">Our Team</h1>
+            <h1 className="lg:text-7xl mb-4 h1 font-bold">Our Team</h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Meet the dedicated members of our team who drive innovation and excellence.</p>
           </div>
           <div className="flex flex-wrap -m-4">
