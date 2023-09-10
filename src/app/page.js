@@ -759,7 +759,7 @@ export default function Home() {
                       Technical support
                     </p>
                     <p className="text-neutral-500 dark:text-neutral-200">
-                      support@example.com
+                      support@vijethasoftwares.in
                     </p>
                     <p className="text-neutral-500 dark:text-neutral-200">
                       +1 234-567-89
@@ -783,7 +783,7 @@ export default function Home() {
                       Sales questions
                     </p>
                     <p className="text-neutral-500 dark:text-neutral-200">
-                      sales@example.com
+                      sales@vijethasoftwares.in
                     </p>
                     <p className="text-neutral-500 dark:text-neutral-200">
                       +1 234-567-89
@@ -805,7 +805,7 @@ export default function Home() {
                   <div className="ml-6 grow">
                     <p className="mb-2 font-bold dark:text-white">Press</p>
                     <p className="text-neutral-500 dark:text-neutral-200">
-                      press@example.com
+                      press@vijethasoftwares.in
                     </p>
                     <p className="text-neutral-500 dark:text-neutral-200">
                       +1 234-567-89
@@ -827,7 +827,7 @@ export default function Home() {
                   <div className="ml-6 grow">
                     <p className="mb-2 font-bold dark:text-white">Bug report</p>
                     <p className="text-neutral-500 dark:text-neutral-200">
-                      bugs@example.com
+                      bugs@vijethasoftwares.in
                     </p>
                     <p className="text-neutral-500 dark:text-neutral-200">
                       +1 234-567-89
