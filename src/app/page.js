@@ -5,6 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import CountUp from 'react-countup';
 import jayandra from '@/assets/jayandra.webp';
 import adarsh from '@/assets/adarsh.webp';
+import Link from 'next/link';
 
 const images = [
   {
@@ -213,7 +214,7 @@ export default function Home() {
         </div>
       </section>
       <section className="body-font min-h-screen" id='services'>
-        <div className="container px-4 py-4 mx-auto">
+        <div className="container px-4 py-4 mx-auto flex flex-col gap-2">
           <motion.div
             className="flex flex-wrap w-full mb-20"
             initial="hidden"
@@ -267,6 +268,11 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+        <div className='w-full flex justify-center items-center'>
+        <Link href="/services">
+        <button className="inline-flex text-white bg-gradient-to-r from-red-400 to-amber-500 background-animate border-0 py-2 px-6 focus:outline-none rounded text-base mx-auto my-6">Browse Services</button>
+        </Link>
+        </div>
         </div>
       </section>
       <section className="body-font min-h-screen my-12" ref={ref1} id='projects'>
