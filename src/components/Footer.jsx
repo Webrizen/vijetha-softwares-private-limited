@@ -9,7 +9,7 @@ export default function Footer() {
           <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
             <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-500">
               <img
-                src="/logo.png"
+                src="/logo.webp"
                 alt="Vijetha Softwares logo"
                 className="w-8 h-8"
               />

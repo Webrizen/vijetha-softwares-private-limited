@@ -144,19 +144,6 @@ export default function Home() {
     <>
       <section className="body-font relative min-h-screen flex flex-col gap-3 justify-center items-center py-24">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-transparent to-transparent"></div>
-        <div className="grid-background">
-          <div className="grid-container">
-            {Array.from({ length: 30 }, (_, index) => (
-              <motion.div
-                key={index}
-                className="grid-box animate-fade-down animate-once animate-ease-in-out"
-                initial="hidden"
-                animate="visible"
-                variants={fadeDown}
-              ></motion.div>
-            ))}
-          </div>
-        </div>
         <div className="container mx-auto flex p-5 items-center justify-center flex-col relative">
           <div className="text-center lg:w-3/4 w-full">
             <motion.span
@@ -175,14 +162,11 @@ export default function Home() {
             >
               Unlocking
             </motion.h1>
-            <motion.h3
+            <h3
               className="sm:text-4xl text-3xl my-4 font-bold bg-clip-text text-transparent gradient-animation"
-              initial="hidden"
-              animate="visible"
-              variants={fadeDown}
             >
               Digital Potential.
-            </motion.h3>
+            </h3>
             <motion.p
               className="mb-8 leading-relaxed text-white animate-fade-down animate-once animate-ease-in-out"
               initial="hidden"
@@ -210,7 +194,7 @@ export default function Home() {
                 <motion.div
                   key={index}
                   className="col-span-2 max-h-12 w-full object-contain lg:col-span-1 filter grayscale invert hover:opacity-25 cursor-pointer"
-                  initial="hidden"
+                  initial="visible"
                   animate="visible"
                   variants={index % 2 === 0 ? slideInLeft : slideInRight}
                 >
@@ -219,6 +203,7 @@ export default function Home() {
                     alt={image.alt}
                     width={158}
                     height={48}
+                    loading = 'lazy'
                   />
                 </motion.div>
               ))}
@@ -227,12 +212,12 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="body-font min-h-screen" ref={ref} id='services'>
+      <section className="body-font min-h-screen" id='services'>
         <div className="container px-4 py-4 mx-auto">
           <motion.div
             className="flex flex-wrap w-full mb-20"
             initial="hidden"
-            animate={inView ? "visible" : "hidden"}
+            animate="visible"
             variants={sectionAnimation}
           >
             <div className="w-full mb-6 lg:mb-0 flex flex-col gap-2 justify-center items-center text-center">
@@ -261,12 +246,18 @@ export default function Home() {
                 key={index}
                 className="xl:w-1/4 md:w-1/2 p-3 bg-[rgba(225,225,225,0.1)] backdrop-blur-2xl rounded-lg cardHover"
                 initial="hidden"
-                animate={inView ? "visible" : "hidden"}
+                animate="visible"
                 variants={cardsAnimation}
                 transition={{ delay: index * 0.2 }}
               >
                 <div className=" p-0 rounded-lg">
-                  <Image className="h-full rounded -z-10 w-full object-cover object-center" src={service.image} alt="content" width={600} height={400} />
+                  <Image className="h-full rounded -z-10 w-full object-cover object-center" 
+                  src={service.image} 
+                  alt="content"
+                  placeholder='blur'
+                  blurDataURL='/hero-dark.webp'
+                  width={600} 
+                  height={400} />
                 </div>
                 <div className='info-card z-10 mt-4'>
                   <h3 className="tracking-widest text-amber-500 text-xs font-medium title-font">{service.category}</h3>
@@ -408,7 +399,7 @@ export default function Home() {
               animate={inView3 ? "visible" : "hidden"}
               variants={shake}>
               <h2 className="title-font font-medium sm:text-4xl text-3xl text-amber-500">
-                <CountUp start={0} end={2700} duration={2} separator="," />+
+                <CountUp start={0} end={50} duration={2} separator="," />+
               </h2>
               <p className="leading-relaxed">Satisfied Clients</p>
             </motion.div>
@@ -416,9 +407,9 @@ export default function Home() {
               animate={inView3 ? "visible" : "hidden"}
               variants={shake}>
               <h2 className="title-font font-medium sm:text-4xl text-3xl text-amber-500">
-                <CountUp start={0} end={18} duration={2} />+
+                <CountUp start={0} end={3} duration={2} />
               </h2>
-              <p className="leading-relaxed">Years Of Experience</p>
+              <p className="leading-relaxed">Operating in countries</p>
             </motion.div>
             <motion.div className="p-4 sm:w-1/4 w-1/2" initial="hidden"
               animate={inView3 ? "visible" : "hidden"}
@@ -432,7 +423,7 @@ export default function Home() {
               animate={inView3 ? "visible" : "hidden"}
               variants={shake}>
               <h2 className="title-font font-medium sm:text-4xl text-3xl text-amber-500">
-                <CountUp start={0} end={4} duration={2} />
+                <CountUp start={0} end={5} duration={2} />
               </h2>
               <p className="leading-relaxed">Saas Products</p>
             </motion.div>
@@ -444,7 +435,7 @@ export default function Home() {
           className="block rounded-3xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
           <div className="flex flex-wrap items-center">
             <div className="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
-              <img src="/about-us.webp" alt="About Us"
+              <Image src="/about-us.webp" width={600} height={400} alt="About Us" placeholder='blur' blurDataURL='/hero-dark.webp'
                 className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg p-2" />
             </div>
             <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
